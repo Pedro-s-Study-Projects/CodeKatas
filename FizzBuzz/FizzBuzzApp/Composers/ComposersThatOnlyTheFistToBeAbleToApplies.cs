@@ -1,11 +1,11 @@
-namespace FizzBuzzApp;
+﻿namespace FizzBuzzApp.Composers;
 
-public class ComposersThatAppend : IComposer
+public class ComposersThatOnlyTheFistToBeAbleToApplies : IComposer
 {
     private IComposer[] _composers;
 
 
-    public ComposersThatAppend(IComposer[] composers)
+    public ComposersThatOnlyTheFistToBeAbleToApplies(IComposer[] composers)
     {
         _composers = composers;
     }
@@ -17,13 +17,12 @@ public class ComposersThatAppend : IComposer
 
     public string Apply(string request)
     {
-        var result = "";
         foreach (var composer in _composers)
         {
             if (composer.CanApply(request))
-                result += composer.Apply(request);
+                return composer.Apply(request);
         }
 
-        return result;
+        return "";
     }
 }

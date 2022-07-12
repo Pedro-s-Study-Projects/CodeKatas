@@ -1,4 +1,4 @@
-namespace FizzBuzzApp;
+namespace FizzBuzzApp.Composers;
 
 public interface IComposer
 {

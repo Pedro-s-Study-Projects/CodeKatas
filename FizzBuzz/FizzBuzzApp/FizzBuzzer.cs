@@ -1,3 +1,7 @@
+using FizzBuzzApp.Composers;
+using FizzBuzzApp.Composers.ExtraFeature;
+using FizzBuzzApp.Composers.FizzBuzzPuzz;
+
 namespace FizzBuzzApp;
 
 public class FizzBuzzer
